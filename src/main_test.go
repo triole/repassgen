@@ -16,11 +16,11 @@ func TestMainFunc(t *testing.T) {
 	os.Args = []string{"repassgen", "[a-z]{6}"}
 	main()
 
-	os.Args = []string{"repassgen", "-entropy", "[a-z]{6}"}
+	os.Args = []string{"repassgen", "-e", "[a-z]{6}"}
 	main()
 
 	os.Setenv("REPASSGEN_FLOAT_ENTROPY", "true")
 
-	os.Args = []string{"repassgen", "-entropy", "[a-z]{6}"}
+	os.Args = []string{"repassgen", "-e", "[a-z]{6}"}
 	main()
 }
